@@ -70,3 +70,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Add additional npm dependencies
+```sh
+    npm i axios jwt-decode material-ui-chip-input moment react-file-base64 react-google-login react-redux redux redux-thunk react-router-dom
+```
+### Add npm dev dependencies
+```sh
+    npm i @redux-devtools/core @redux-devtools/dock-monitor @redux-devtools/log-monitor eslint-config-airbnb eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks --save-dev
+```
