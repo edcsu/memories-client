@@ -5,7 +5,7 @@ const url = "http://localhost:5000/api/posts";
 export const fetchPosts = () => axios.get(url);
 
 export const createPost = (newPost) => {
-    console.log(...newPost);
+    console.log(newPost);
 
-    axios.post(url, newPost)
+   return axios.post(url, newPost)
 };
