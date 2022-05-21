@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
-import ThumbAltIcon from "@material-ui/icons/ThumbAlt";
+import ThumbAltIcon from "@material-ui/icons/ThumbUpAlt";
 import DeleteIcon from "@material-ui/icons/Delete";
-import MoreHorizIcon from "@material-ui/icons/Morehoriz";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import moment from "moment";
 import useStyles from "./styles";
 
@@ -12,7 +12,7 @@ const Post = ({ post }) => {
         <Card className={classes.card}>
             <CardMedia 
                 className={classes.media} 
-                image={post.selectedfile} 
+                image={post.selectedFile} 
                 title={post.title}
             />
             <div className={classes.overlay} >
@@ -21,7 +21,7 @@ const Post = ({ post }) => {
             </div>
             <div className={classes.overlay2}>
                 <Button style={{color: 'white'}} size="small" onClick={() => {}}>
-                    <MoreHorizIcon fontSize="default" />
+                    <MoreHorizIcon fontSize="medium" />
                 </Button>
             </div> 
             <div className={classes.details}>
