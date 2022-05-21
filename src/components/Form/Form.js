@@ -64,7 +64,7 @@ const Form = () => {
                 />
                 <div className={classes.fileInput}>
                     <FileBase
-                        type="File" 
+                        type="file" 
                         multiple={false}
                         onDone={(base64) => setPostData({ ...postData, selectedFile: base64})}
                     />
