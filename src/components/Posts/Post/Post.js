@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
+import { Card, CardActions, CardContent, CardMedia, Button, Typography, Chip } from "@material-ui/core";
 import ThumbAltIcon from "@material-ui/icons/ThumbUpAlt";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/EditRounded";
@@ -33,12 +33,9 @@ const Post = ({ post, setCurrentId }) => {
                 </Button>
             </div> 
             <div className={classes.details}>
-                <Typography 
-                    variant="body2" 
-                    color="textSecondary" 
-                >
-                    {post.tags.map((tag) => `#${tag} `)}
-                </Typography>
+                {post.tags.map((tag) => {
+                    return <Chip label={`#${tag}`}/>
+                })}
             </div>
                 <Typography 
                     className={classes.title} 
