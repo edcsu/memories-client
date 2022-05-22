@@ -37,7 +37,7 @@ const Post = ({ post, setCurrentId }) => {
                     variant="body2" 
                     color="textSecondary" 
                 >
-                    {post.tags.map((tag) => `#${tag}`)}
+                    {post.tags.map((tag) => `#${tag} `)}
                 </Typography>
             </div>
                 <Typography 
@@ -49,7 +49,9 @@ const Post = ({ post, setCurrentId }) => {
                 </Typography>
             <CardContent>
                 <Typography 
-                    variant="h5" 
+                    variant="body2"
+                    color="textSecondary" 
+                    component="p"
                     gutterBottom
                 >
                     {post.message}
