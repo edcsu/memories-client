@@ -2,12 +2,17 @@ import React from "react";
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from "@material-ui/core";
 import ThumbAltIcon from "@material-ui/icons/ThumbUpAlt";
 import DeleteIcon from "@material-ui/icons/Delete";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import EditIcon from "@material-ui/icons/EditRounded";
 import moment from "moment";
 import useStyles from "./styles";
+import { useDispatch } from "react-redux";
+
+import { deletePost } from "../../../actions/posts";
 
 const Post = ({ post, setCurrentId }) => {
     const classes = useStyles();
+    const dispatch = useDispatch();
+
     return (
         <Card className={classes.card}>
             <CardMedia 
@@ -24,7 +29,7 @@ const Post = ({ post, setCurrentId }) => {
                     style={{color: 'white'}} 
                     size="small" 
                     onClick={() => setCurrentId(post._id)}>
-                    <MoreHorizIcon fontSize="medium" />
+                    <EditIcon fontSize="medium" />
                 </Button>
             </div> 
             <div className={classes.details}>
@@ -54,9 +59,9 @@ const Post = ({ post, setCurrentId }) => {
                 <Button size="small" color="primary" onClick={() => {}} >
                     <ThumbAltIcon fontSize="small" />
                     Like
-                    {post.likeCount}
+                    {` ${post.likeCount}`}
                 </Button>
-                <Button size="small" color="primary" onClick={() => {}} >
+                <Button size="small" color="primary" onClick={() => dispatch(deletePost(post._id))} >
                     <DeleteIcon fontSize="small" />
                     Delete
                 </Button>
